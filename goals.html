@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savings Goals – FitXpence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="page-head">
+    <div class="container">
+      <h1>🎯 Savings Goals</h1>
+      <p>Big dreams are built from small deposits. Set a goal and watch it come to life.</p>
+    </div>
+  </section>
+
+  <main class="container pull-up">
+    <div class="split" style="grid-template-columns:360px 1fr">
+      <div>
+        <form class="card" id="goalForm">
+          <h3 class="mb">Create a new goal</h3>
+          <div class="form-grid">
+            <div class="full"><label for="gName">Goal name</label><input id="gName" required maxlength="40" placeholder="e.g. Goa trip"></div>
+            <div><label for="gTarget">Target (₹)</label><input type="number" id="gTarget" min="1" required placeholder="50000"></div>
+            <div><label for="gSaved">Already saved (₹)</label><input type="number" id="gSaved" min="0" placeholder="0"></div>
+            <div class="full"><label for="gDate">Target date (optional)</label><input type="date" id="gDate"></div>
+            <div class="full"><button class="btn btn-primary" style="width:100%">Add goal</button></div>
+          </div>
+        </form>
+        <div class="card mt">
+          <h3>Total saved</h3>
+          <h2 class="pos" id="gTotal" style="margin:8px 0">₹0</h2>
+          <p class="muted" id="gMsg">Create your first goal to start saving with purpose.</p>
+        </div>
+      </div>
+
+      <div id="goalList" class="grid g2"></div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="common.js"></script>
+  <script src="goals.js"></script>
+</body>
+</html>

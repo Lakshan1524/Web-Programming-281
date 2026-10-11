@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saving Tips &amp; Challenges – FitXpence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="page-head">
+    <div class="container">
+      <h1>💡 Saving Tips &amp; Challenges</h1>
+      <p>Practical ideas, fun challenges and a growth calculator to keep you motivated.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:50px">
+    <div class="container">
+      <div class="chips" id="chips"></div>
+      <div class="grid g3" id="tipGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="challenges" style="padding-top:20px">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Challenges</span>
+        <h2>Make saving a game</h2>
+        <p>Tap a box when you complete it. Your progress is saved automatically.</p>
+      </div>
+
+      <div class="card mb">
+        <div class="row between mb">
+          <div><h3>🚫 30-day no-spend challenge</h3><p class="muted">Skip all non-essential spending. Track the days you complete.</p></div>
+          <div class="row"><b id="nsCount">0 / 30 days</b><button class="btn btn-outline btn-sm" id="nsReset">Reset</button></div>
+        </div>
+        <div class="progress mb"><i id="nsBar" style="width:0%"></i></div>
+        <div class="day-grid" id="nsGrid"></div>
+        <p class="muted mt" id="nsMsg"></p>
+      </div>
+
+      <div class="card">
+        <div class="row between mb">
+          <div><h3>📅 52-week money challenge</h3><p class="muted">Save ₹<span id="wUnit">50</span> × week number. Week 1 is ₹50, week 52 is ₹2,600. Total: <b id="wTotalAll"></b></p></div>
+          <div class="row"><b id="wCount"></b><button class="btn btn-outline btn-sm" id="wReset">Reset</button></div>
+        </div>
+        <div class="progress mb"><i id="wBar" style="width:0%"></i></div>
+        <div class="day-grid" id="wGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="calculator" style="padding-top:20px">
+    <div class="container">
+      <div class="grid g2">
+        <div class="card">
+          <h3>📈 Savings growth calculator</h3>
+          <p class="muted mb">See what steady monthly saving can become with compound interest.</p>
+          <div class="form-grid">
+            <div><label for="cMonthly">Monthly saving (₹)</label><input type="number" id="cMonthly" value="5000" min="0"></div>
+            <div><label for="cRate">Yearly return (%)</label><input type="number" id="cRate" value="7" min="0" step="0.5"></div>
+            <div class="full"><label for="cYears">Years: <b id="cYearsVal">10</b></label><input type="range" id="cYears" min="1" max="30" value="10" style="padding:0"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="result-box"><small class="muted"><b>YOU COULD HAVE</b></small><strong id="cTotal">₹0</strong></div>
+          <div class="mini-row mt"><span>You put in</span><b id="cPut">₹0</b></div>
+          <div class="mini-row"><span>Growth earned</span><b class="pos" id="cGain">₹0</b></div>
+          <div class="banner mt"><span class="em">🌟</span><span>Start now. Time in the market is your biggest advantage.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="common.js"></script>
+  <script src="tips-data.js"></script>
+  <script src="tips.js"></script>
+</body>
+</html>

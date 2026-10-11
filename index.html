@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitXpence – Track Expenses. Save More. Get Financially Fit.</title>
+  <meta name="description" content="FitXpence helps you track expenses, build budgets and reach savings goals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">💪 Your money fitness coach</span>
+        <h1>Track expenses. <em>Save more.</em> Live freely.</h1>
+        <p class="lead">FitXpence turns everyday spending into clear insights, smart budgets and savings goals, and cheers you on every step of the way.</p>
+        <div class="hero-actions">
+          <a href="tracker.html" class="btn btn-primary">Start Tracking →</a>
+          <a href="tips.html" class="btn btn-outline">Saving Tips</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>100%</strong><span>Free to use</span></div>
+          <div><strong>Private</strong><span>Data stays with you</span></div>
+          <div><strong>20%+</strong><span>Savings rate to aim for</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h4>THIS MONTH · YOUR SNAPSHOT</h4>
+        <div class="big" id="hBalance">₹0</div>
+        <div class="progress mb"><i id="hBar" style="width:0%"></i></div>
+        <div class="mini-row"><span>Income</span><b class="pos" id="hInc">₹0</b></div>
+        <div class="mini-row"><span>Expenses</span><b class="neg" id="hExp">₹0</b></div>
+        <div class="mini-row"><span>Savings rate</span><b id="hRate">0%</b></div>
+        <div class="banner mt" style="padding:12px 14px"><span class="em">✨</span><span id="hMsg">Add your first expense to begin your journey!</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Features</span>
+        <h2>Everything you need to build better money habits</h2>
+        <p>Simple tools, beautiful insights and plenty of motivation.</p>
+      </div>
+      <div class="grid g3">
+        <a href="tracker.html" class="card hover"><div class="icon-box">🧾</div><h3>Expense Tracker</h3><p>Log income and spending in seconds. Filter, search, export and see where every rupee goes with live charts.</p></a>
+        <a href="budget.html" class="card hover"><div class="icon-box">📊</div><h3>Budget Planner</h3><p>Set limits per category, watch progress bars and use the 50/30/20 rule to plan your month.</p></a>
+        <a href="goals.html" class="card hover"><div class="icon-box">🎯</div><h3>Savings Goals</h3><p>Dream trip, emergency fund, new phone. Track each goal and celebrate every milestone.</p></a>
+        <a href="tips.html" class="card hover"><div class="icon-box">💡</div><h3>Saving Tips</h3><p>Practical, proven ideas for food, transport, shopping and bills to cut costs without losing joy.</p></a>
+        <a href="tips.html#challenges" class="card hover"><div class="icon-box">🏆</div><h3>Money Challenges</h3><p>Try the 30-day no-spend and 52-week challenges to turn saving into a fun game.</p></a>
+        <a href="tips.html#calculator" class="card hover"><div class="icon-box">📈</div><h3>Growth Calculator</h3><p>See how small monthly savings can grow into something big with the power of compounding.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="container">
+      <blockquote id="quote">“…”</blockquote>
+      <cite id="cite"></cite>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Three steps to financial fitness</h2>
+      </div>
+      <div class="grid g3">
+        <div class="card"><div class="step-num">1</div><h3>Track</h3><p>Record every income and expense. Awareness is the first step to saving.</p></div>
+        <div class="card"><div class="step-num">2</div><h3>Plan</h3><p>Set category budgets and savings goals that match your lifestyle.</p></div>
+        <div class="card"><div class="step-num">3</div><h3>Grow</h3><p>Follow tips and challenges, review your progress and watch your savings climb.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="grid g2">
+        <div class="card">
+          <span class="badge">💡 Tip of the day</span>
+          <h3 style="margin-top:12px" id="tipTitle">…</h3>
+          <p id="tipText"></p>
+          <a href="tips.html" class="btn btn-outline btn-sm mt">More tips →</a>
+        </div>
+        <div class="card">
+          <span class="badge">🔥 Quick rule</span>
+          <h3 style="margin-top:12px">The 50 / 30 / 20 rule</h3>
+          <p>Spend 50% of income on needs, 30% on wants and put 20% into savings. Try it in the Budget Planner.</p>
+          <a href="budget.html" class="btn btn-outline btn-sm mt">Open planner →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to get financially fit?</h2>
+        <p>Add your first expense today. Small steps, taken consistently, create big change.</p>
+        <a href="tracker.html" class="btn btn-primary">Open the Tracker →</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="common.js"></script>
+  <script src="tips-data.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker – FitXpence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="page-head">
+    <div class="container">
+      <h1>🧾 Expense Tracker</h1>
+      <p>Record every rupee in and out. Awareness is the first step to saving more.</p>
+    </div>
+  </section>
+
+  <main class="container pull-up">
+    <div class="grid g4">
+      <div class="card stat"><div class="ic" style="background:#e6f7f1">💰</div><div><small>INCOME</small><strong class="pos" id="sInc">₹0</strong></div></div>
+      <div class="card stat"><div class="ic" style="background:#fdecec">💸</div><div><small>EXPENSES</small><strong class="neg" id="sExp">₹0</strong></div></div>
+      <div class="card stat"><div class="ic" style="background:#e8f0fe">🏦</div><div><small>BALANCE</small><strong id="sBal">₹0</strong></div></div>
+      <div class="card stat"><div class="ic" style="background:#fff3d6">📈</div><div><small>SAVINGS RATE</small><strong id="sRate">0%</strong></div></div>
+    </div>
+
+    <div class="banner mt" id="coach"><span class="em">✨</span><span id="coachMsg"></span></div>
+
+    <div class="split mt">
+      <div>
+        <form class="card" id="txForm">
+          <h3 class="mb">Add transaction</h3>
+          <div class="toggle mb">
+            <button type="button" class="on exp" id="tExp">Expense</button>
+            <button type="button" id="tInc">Income</button>
+          </div>
+          <div class="form-grid">
+            <div class="full"><label for="amount">Amount (₹)</label><input type="number" id="amount" min="1" step="any" placeholder="e.g. 450" required></div>
+            <div><label for="category">Category</label><select id="category"></select></div>
+            <div><label for="date">Date</label><input type="date" id="date" required></div>
+            <div class="full"><label for="note">Note (optional)</label><input type="text" id="note" maxlength="60" placeholder="e.g. Lunch with friends"></div>
+            <div class="full"><button class="btn btn-primary" style="width:100%" type="submit">Add transaction</button></div>
+          </div>
+        </form>
+
+        <div class="card mt">
+          <h3 class="mb">Spending breakdown</h3>
+          <div class="chart-box">
+            <canvas id="chart"></canvas>
+            <ul class="legend" id="legend"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="row between mb">
+          <h3>Transactions</h3>
+          <div class="row">
+            <button class="btn btn-outline btn-sm" id="exportBtn">⬇ Export CSV</button>
+            <button class="btn btn-outline btn-sm" id="sampleBtn">Load sample data</button>
+            <button class="btn btn-danger btn-sm" id="clearBtn">Clear all</button>
+          </div>
+        </div>
+        <div class="form-grid mb" style="grid-template-columns:1fr 1fr 1.4fr">
+          <div><label for="fMonth">Month</label><input type="month" id="fMonth"></div>
+          <div><label for="fType">Type</label><select id="fType"><option value="all">All</option><option value="expense">Expenses</option><option value="income">Income</option></select></div>
+          <div><label for="fSearch">Search</label><input type="search" id="fSearch" placeholder="Category or note…"></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Date</th><th>Category</th><th>Note</th><th style="text-align:right">Amount</th><th></th></tr></thead>
+            <tbody id="txBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="common.js"></script>
+  <script src="tracker.js"></script>
+</body>
+</html>

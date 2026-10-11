@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Planner – FitXpence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="page-head">
+    <div class="container">
+      <h1>📊 Budget Planner</h1>
+      <p>Give every rupee a job. Set monthly limits per category and stay in control.</p>
+    </div>
+  </section>
+
+  <main class="container pull-up">
+    <div class="grid g3">
+      <div class="card"><small class="muted"><b>TOTAL BUDGET</b></small><h2 id="bTotal">₹0</h2></div>
+      <div class="card"><small class="muted"><b>SPENT THIS MONTH</b></small><h2 id="bSpent" class="neg">₹0</h2></div>
+      <div class="card"><small class="muted"><b>REMAINING</b></small><h2 id="bLeft" class="pos">₹0</h2></div>
+    </div>
+
+    <div class="split mt" style="grid-template-columns:1fr 380px">
+      <div class="card">
+        <div class="row between mb"><h3>Category budgets</h3><span class="muted" id="monthLabel"></span></div>
+        <div id="budgetList"></div>
+      </div>
+
+      <div class="card" id="rule">
+        <h3>50 / 30 / 20 calculator</h3>
+        <p class="muted mb">Enter your monthly income to see a balanced split.</p>
+        <label for="incomeIn">Monthly income (₹)</label>
+        <input type="number" id="incomeIn" min="0" placeholder="e.g. 40000">
+        <div class="mt" id="ruleOut"></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="common.js"></script>
+  <script src="budget.js"></script>
+</body>
+</html>
